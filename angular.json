@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "ng-modal": {
@@ -120,38 +120,38 @@
         }
       }
     },
-    "ng-modal-lib": {
+    "ngx-modal-window": {
       "projectType": "library",
-      "root": "projects/ng-modal-lib",
-      "sourceRoot": "projects/ng-modal-lib/src",
+      "root": "projects/ngx-modal-window",
+      "sourceRoot": "projects/ngx-modal-window/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "projects/ng-modal-lib/tsconfig.lib.json",
-            "project": "projects/ng-modal-lib/ng-package.json"
+            "tsConfig": "projects/ngx-modal-window/tsconfig.lib.json",
+            "project": "projects/ngx-modal-window/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/ng-modal-lib/tsconfig.lib.prod.json"
+              "tsConfig": "projects/ngx-modal-window/tsconfig.lib.prod.json"
             }
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/ng-modal-lib/src/test.ts",
-            "tsConfig": "projects/ng-modal-lib/tsconfig.spec.json",
-            "karmaConfig": "projects/ng-modal-lib/karma.conf.js"
+            "main": "projects/ngx-modal-window/src/test.ts",
+            "tsConfig": "projects/ngx-modal-window/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-modal-window/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/ng-modal-lib/tsconfig.lib.json",
-              "projects/ng-modal-lib/tsconfig.spec.json"
+              "projects/ngx-modal-window/tsconfig.lib.json",
+              "projects/ngx-modal-window/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -159,6 +159,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ng-modal"
+    }
+  },
+  "defaultProject": "ng-modal",
+  "cli": {
+    "analytics": false
+  }
 }

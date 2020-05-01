@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { ModalModule } from 'ng-modal-lib';
+import { NgxModalWindowModule } from 'projects/ngx-modal-window/src/public-api';
 
 import { AppComponent } from './app.component';
 import { ModalDemoComponent } from './modal-demo.component';
@@ -16,7 +16,7 @@ import { PanelDemoComponent } from './panel-demo.component';
   ],
   imports: [
     BrowserModule,
-    ModalModule
+    NgxModalWindowModule
   ],
   bootstrap: [AppComponent]
 })

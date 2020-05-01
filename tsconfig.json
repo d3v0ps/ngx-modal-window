@@ -19,9 +19,9 @@
       "dom"
     ],
     "paths": {
-      "ng-modal-lib": [
-        "dist/ng-modal-lib/ng-modal-lib",
-        "dist/ng-modal-lib"
+      "ngx-modal-window": [
+        "dist/ngx-modal-window/ngx-modal-window",
+        "dist/ngx-modal-window"
       ]
     }
   },

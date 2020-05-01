@@ -5,18 +5,21 @@ import {ResizableEvent} from '../resizable/types';
 import {maxZIndex, findAncestor} from '../common/utils';
 
 @Component({
-  selector: 'app-modal',
+  selector: 'ngx-modal-window',
   templateUrl: 'modal.component.html',
   styleUrls: ['modal.component.css'],
   encapsulation: ViewEncapsulation.None,
 })
-export class ModalComponent implements AfterViewChecked {
+export class ModalWindowComponent implements AfterViewChecked {
 
-  @Input() scrollTopEnable: boolean = true;
-  @Input() maximizable: boolean;
-  @Input() backdrop: boolean = true;
+  @Input() scrollTopEnable = true;
+  @Input() maximizable = false;
+  @Input() backdrop = true;
 
-  @Output() closeModal: EventEmitter<boolean> = new EventEmitter();
+  @Output() openModal = new EventEmitter();
+  @Output() closeModal = new EventEmitter<boolean>();
+  @Output() resizeModal = new EventEmitter<ResizableEvent>();
+  @Output() maximizeModal = new EventEmitter<boolean>();
 
   @ViewChild('modalRoot', {static: false}) modalRoot: ElementRef;
   @ViewChild('modalBody', {static: false}) modalBody: ElementRef;
@@ -106,6 +109,8 @@ export class ModalComponent implements AfterViewChecked {
     if (event.direction === 'vertical') {
       this.calcBodyHeight();
     }
+
+    this.resizeModal.emit(event);
   }
 
   calcBodyHeight() {
@@ -132,6 +137,9 @@ export class ModalComponent implements AfterViewChecked {
     } else {
       this.maximize();
     }
+
+    this.maximizeModal.emit(this.maximized);
+
     event.preventDefault();
   }
 

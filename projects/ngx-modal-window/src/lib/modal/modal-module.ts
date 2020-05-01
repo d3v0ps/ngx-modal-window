@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {ModalComponent} from './modal.component';
+import {ModalWindowComponent} from './modal.component';
 import {ResizableModule} from '../resizable/resizable-module';
 import {DraggableModule} from '../draggable/draggable-module';
 
@@ -11,10 +11,10 @@ import {DraggableModule} from '../draggable/draggable-module';
     DraggableModule,
   ],
   declarations: [
-    ModalComponent,
+    ModalWindowComponent,
   ],
   exports: [
-    ModalComponent,
+    ModalWindowComponent,
   ]
 })
-export class ModalModule {}
+export class NgxModalWindowModule {}

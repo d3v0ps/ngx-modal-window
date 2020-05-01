@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-nested-modal-demo',
   template: `
     <button class="dt-button" (click)="modalRoot.show()">Open modal</button>
-    <app-modal #modalRoot class="nested-modal-demo1">
+    <ngx-modal-window #modalRoot class="nested-modal-demo1">
       <ng-container class="app-modal-header">Modal 1</ng-container>
       <ng-container class="app-modal-body">
         <h3>MODAL DIALOG</h3>
@@ -12,7 +12,7 @@ import { Component } from '@angular/core';
           Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s.</p>
 
         <button class="dt-button" (click)="childModal.show()">Open modal</button>
-        <app-modal #childModal class="nested-modal-demo2">
+        <ngx-modal-window #childModal class="nested-modal-demo2">
           <ng-container class="app-modal-header">Modal 2</ng-container>
           <ng-container class="app-modal-body">
             <h3>MODAL DIALOG</h3>
@@ -20,7 +20,7 @@ import { Component } from '@angular/core';
               Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s.</p>
 
               <button class="dt-button" (click)="modal3.show()">Open modal</button>
-              <app-modal #modal3 class="nested-modal-demo3">
+              <ngx-modal-window #modal3 class="nested-modal-demo3">
                 <ng-container class="app-modal-header">Modal 3</ng-container>
                 <ng-container class="app-modal-body">
                   <h3>MODAL DIALOG</h3>
@@ -32,7 +32,7 @@ import { Component } from '@angular/core';
                   <button class="dt-button dt-green">Save</button>
                   <button class="dt-button dt-blue" style="float: right;" (click)="modal3.hide()">Close</button>
                 </ng-container>
-              </app-modal>
+              </ngx-modal-window>
 
           </ng-container>
           <ng-container class="app-modal-footer">
@@ -41,7 +41,7 @@ import { Component } from '@angular/core';
             <button class="dt-button dt-blue" style="float: right;" (click)="childModal.hide()">Close
             </button>
           </ng-container>
-        </app-modal>
+        </ngx-modal-window>
 
       </ng-container>
       <ng-container class="app-modal-footer">
@@ -49,7 +49,7 @@ import { Component } from '@angular/core';
         <button class="dt-button dt-green">Save</button>
         <button class="dt-button dt-blue" style="float: right;" (click)="modalRoot.hide()">Close</button>
       </ng-container>
-    </app-modal>
+    </ngx-modal-window>
   `,
 })
 export class NestedModalDemoComponent {

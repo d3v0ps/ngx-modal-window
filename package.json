@@ -1,5 +1,5 @@
 {
-  "name": "ng-modal",
+  "name": "ngx-modal-window",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -8,9 +8,9 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "lib:build": "ng build ng-modal-lib --prod",
-    "lib:watch": "ng build ng-modal-lib --watch",
-    "lib:publish": "cd dist/ng-modal-lib && npm publish"
+    "lib:build": "ng build ngx-modal-window --prod",
+    "lib:watch": "ng build ngx-modal-window --watch",
+    "lib:publish": "cd dist/ngx-modal-window && npm publish"
   },
   "private": true,
   "dependencies": {

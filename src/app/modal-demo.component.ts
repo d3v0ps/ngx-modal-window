@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-modal-demo',
   template: `
     <button class="dt-button" (click)="modalRoot.show()">Open modal</button>
-    <app-modal #modalRoot
+    <ngx-modal-window #modalRoot
                [maximizable]="true"
                (closeModal)="onCloseModal()">
       <ng-container class="app-modal-header">Demo modal</ng-container>
@@ -18,7 +18,7 @@ import { Component } from '@angular/core';
         <button class="dt-button dt-green">Save</button>
         <button class="dt-button dt-blue" style="float: right;" (click)="modalRoot.hide()">Close</button>
       </ng-container>
-    </app-modal>
+    </ngx-modal-window>
   `,
 })
 export class ModalDemoComponent {
