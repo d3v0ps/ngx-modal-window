@@ -67,6 +67,7 @@ export class ModalWindowComponent implements AfterViewChecked {
       if (this.scrollTopEnable) {
         this.modalBody.nativeElement.scrollTop = 0;
       }
+      this.openModal.emit(true);
     }, 1);
   }
 
